@@ -1,0 +1,36 @@
+@use "../base/mixins" as *;
+
+.title-h1-italic {
+  @include title;
+  font-size: 21px;
+}
+.title-h2 {
+  @include title;
+  font-size: 32px;
+}
+.title-h3 {
+  @include title;
+  font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+  .title-h2 {
+    @include title;
+    font-size: 36px;
+  }
+  .title-h3 {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .title-h2 {
+    @include title;
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  h1.title-h1-italic {
+    @include title;
+    font-size: 32px;
+  }
+}

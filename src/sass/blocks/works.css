@@ -1,0 +1,17 @@
+.works {
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.works__slider {
+  margin-top: 40px;
+}
+
+.works .swiper-slide img {
+  width: 100%;
+}
+
+.works .swiper-button-prev,
+.works .swiper-button-next {
+  display: none;
+}

@@ -1,0 +1,1 @@
+@use "libs/modern-normalize.min.css";@use "libs/fontello.css";@use "base/variables.scss" as *;@use "base/mixins.scss" as *;@use "base/basic.scss";@use "blocks/promo.scss";@use "blocks/header.scss";@use "ui/titles.scss" as *;@use "ui/buttons.scss";@use "blocks/activites.scss";@use "blocks/touch.scss";@use "blocks/works.scss"

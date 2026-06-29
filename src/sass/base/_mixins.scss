@@ -1,0 +1,25 @@
+@use "variables" as *;
+
+@mixin title {
+  color: $dark;
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin button {
+  display: block;
+  padding: 0 10px;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid $dark;
+  text-align: center;
+  color: $dark;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+}

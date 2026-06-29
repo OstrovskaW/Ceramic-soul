@@ -1,0 +1,87 @@
+@use "../base/variables.scss" as *;
+
+.header {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 100px;
+    height: 100px;
+  }
+  &__icons {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    a {
+      display: block;
+      color: $dark;
+      span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        font-size: 18px;
+      }
+    }
+  }
+  &__nav {
+    display: none;
+  }
+}
+.burger {
+  height: 23px;
+  display: flex;
+  row-gap: 10px;
+  flex-direction: column;
+  padding-right: 35px;
+  span {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: $dark;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    &__nav {
+      display: block;
+      margin-top: 20px;
+      ul {
+        display: flex;
+        padding-left: 0;
+        justify-content: center;
+        gap: 30px;
+        li {
+          list-style-type: none;
+        }
+      }
+    }
+    &__link {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: normal;
+      /* identical to box height */
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $dark;
+    }
+  }
+  .burger {
+    visibility: hidden;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .header {
+    &__logo {
+      width: 150px;
+      height: 151px;
+    }
+    &__nav {
+      margin-top: 36px;
+      ul {
+        gap: 60px;
+      }
+    }
+  }
+}

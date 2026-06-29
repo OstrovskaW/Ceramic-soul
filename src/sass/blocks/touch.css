@@ -1,0 +1,40 @@
+@use "../base/variables.scss" as *;
+
+.touch {
+  padding-top: 60px;
+}
+
+.touch__wrapper {
+  margin-top: 60px;
+}
+
+.touch__img {
+  display: none;
+}
+
+.touch__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.touch label {
+  display: block;
+}
+
+@media screen and (min-width: 1200px) {
+  .touch__img {
+    display: block;
+    width: 550px;
+    height: 342px;
+    object-fit: cover;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .touch__img {
+    width: 100%;
+    height: 356px;
+  }
+}
