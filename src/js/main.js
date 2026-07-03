@@ -4,11 +4,12 @@ import "../sass/style.scss";
 
 // core version + navigation, pagination modules:
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 // import Swiper and modules styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 // init Swiper:
 try {
@@ -25,6 +26,7 @@ try {
       },
       1920: {
         spaceBetween: 35,
+        slidesPerView: 3,
       },
     },
     pagination: {
@@ -32,9 +34,15 @@ try {
       clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".icon-right-open",
+      prevEl: ".icon-left-open",
     },
-    modules: [Navigation, Pagination],
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      draggable: true,
+    },
+    modules: [Navigation, Pagination, Scrollbar],
   });
-} catch (e) {}
+} catch (e) {
+  console.error("Swiper error:", e);
+}
