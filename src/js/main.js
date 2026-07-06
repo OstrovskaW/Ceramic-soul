@@ -1,6 +1,5 @@
 import "purecss/build/grids-min.css";
 import "purecss/build/grids-responsive-min.css";
-import "../sass/style.scss";
 
 // core version + navigation, pagination modules:
 import Swiper from "swiper";
@@ -10,7 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-
+import "../sass/style.scss";
 // init Swiper:
 try {
   const swiper = new Swiper(".works__slider", {
@@ -32,6 +31,7 @@ try {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      type: "bullets",
     },
     navigation: {
       nextEl: ".icon-right-open",
