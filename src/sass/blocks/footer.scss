@@ -1,0 +1,50 @@
+@use "../base/variables.scss" as *;
+.footer {
+  background-color: $dark;
+  max-height: 814px;
+  color: $light;
+}
+.footer__wrapper {
+  padding-top: 50px;
+  .footer__form {
+    h3 {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-transform: uppercase;
+      padding-bottom: 40px;
+    }
+    p {
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      padding-bottom: 40px;
+    }
+    form {
+      background-color: $dark;
+      color: $light;
+    }
+  }
+}
+
+.footer__input {
+  color: $light; // цвет вводимого текста
+  border: none;
+  border-bottom: 1px solid $light; // только нижняя линия, светлая на тёмном фоне
+  background: transparent;
+  outline: none;
+  width: 100%;
+
+  &:focus {
+    border-bottom-color: $ceramic; // акцентный цвет при фокусе
+  }
+
+  &::placeholder {
+    color: $light;
+    opacity: 0.6;
+  }
+}
