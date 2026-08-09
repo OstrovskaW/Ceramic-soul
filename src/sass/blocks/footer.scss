@@ -1,7 +1,7 @@
 @use "../base/variables.scss" as *;
 .footer {
   background-color: $dark;
-  max-height: 814px;
+  max-height: 560px;
   color: $light;
 }
 .footer__wrapper {
@@ -149,34 +149,65 @@
   }
 }
 @media screen and (min-width: 768px) {
-  .footer__links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 40px;
-    width: 100%;
-    column-gap: 66px;
-    div {
-      width: 25%;
-    }
-    .footer__links__block {
-      width: 428px;
-      .footer__links__block__1 {
-        width: 15%;
-      }
-      .footer__links__block__2 {
-        width: 20%;
-      }
-      .footer__links__block__3 {
-        margin-top: 0px;
-        width: 30%;
-        margin-right: 15px;
-      }
-    }
-    .footer__links__block__4 {
+  footer {
+    max-height: 573px;
+    .footer__links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       margin-top: 40px;
-      width: 92px;
-      margin-left: auto;
+      width: 100%;
+      column-gap: 66px;
+      div {
+        width: 25%;
+      }
+      .footer__links__block {
+        width: 428px;
+        .footer__links__block__1 {
+          width: 15%;
+        }
+        .footer__links__block__2 {
+          width: 20%;
+        }
+        .footer__links__block__3 {
+          margin-top: 0px;
+          width: 30%;
+          margin-right: 15px;
+        }
+      }
+      .footer__links__block__4 {
+        margin-top: 40px;
+        width: 92px;
+        margin-left: auto;
+        .footer__social__icons {
+          display: flex;
+          gap: 10px;
+          margin-top: 0px;
+          margin-bottom: 20px;
+          width: 90px;
+          a {
+            img {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  footer {
+    max-height: 425px;
+    .footer__wrapper__blocks {
+      column-gap: 164px;
+      display: flex;
+      .footer__links__block {
+        margin-top: 0px;
+      }
+      .footer__links__block__4 {
+        margin-top: 0px;
+      }
     }
   }
 }
