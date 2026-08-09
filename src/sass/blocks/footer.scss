@@ -199,14 +199,17 @@
 @media screen and (min-width: 1200px) {
   footer {
     max-height: 425px;
+    .footer__form {
+      margin-top: 50px;
+    }
     .footer__wrapper__blocks {
       column-gap: 164px;
       display: flex;
       .footer__links__block {
-        margin-top: 0px;
+        margin-top: 10px;
       }
       .footer__links__block__4 {
-        margin-top: 0px;
+        margin-top: 10px;
       }
     }
   }
