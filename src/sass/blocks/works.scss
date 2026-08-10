@@ -1,110 +1,18 @@
-@use "../base/variables.scss" as *;
+// Works Block Styles
+// This section defines the styles for the works block and its items.
 
 .works {
-  padding-top: 60px;
-  padding-bottom: 90px;
-  &__slider {
-    position: relative;
-    margin-top: 40px;
-    padding-bottom: 30px;
-  }
-  .swiper-slide img {
-    width: 100%;
-  }
-  .works__slider-nav {
-    display: none;
-  }
-  .swiper-pagination {
-    bottom: 0px;
-  }
-  .swiper-scrollbar {
-    display: none;
-  }
-  .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    background-color: $dark;
-    border-radius: 0;
-    opacity: 1;
-    -webkit-tap-highlight-color: transparent;
-  }
-  .swiper-pagination-bullet-active {
-    background-color: $ceramic;
-  }
-}
-@media screen and (min-width: 768px) {
-  .works {
-    .swiper-slide img {
-      display: block;
-      width: 400px;
-      margin: 0 auto;
-    }
-    .swiper-scrollbar {
-      display: none;
-    }
-    &__slider {
-      margin-top: 45px;
-      padding-bottom: 30px;
-    }
-  }
-}
-@media screen and (min-width: 1200px) {
-  .works {
-    &__wrapper {
-      position: relative;
-      padding: 0 40px;
-    }
-    &__slider {
-      margin: 80px 40px 0 40px;
-    }
-    .swiper-slide img {
-      width: 100%;
-      margin: 0;
-    }
-    .swiper-scrollbar {
-      display: none;
-    }
-    .swiper-pagination {
-      display: block;
-    }
-    .swiper-pagination-bullet {
-      bottom: 50px;
-    }
-    .works__slider-nav {
-      position: absolute;
-      display: block;
-      font-size: 21px;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: transparent;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-      z-index: 10;
-      &:before {
-        width: auto;
-        margin: 0;
-      }
-    }
-    .icon-left-open {
-      left: 13px;
-    }
-    .icon-right-open {
-      right: 13px;
-    }
-  }
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 1.5rem;
+	padding: 2rem;
 }
 
-@media screen and (min-width: 1920px) {
-  .works {
-    &__slider {
-      margin: 80px 85px 0 85px;
-    }
-    .icon-left-open {
-      left: 0px;
-    }
-    .icon-right-open {
-      right: 0px;
-    }
-  }
+.works__item {
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+	overflow: hidden;
 }
+
+.works {}

@@ -1,7 +1,7 @@
 @use "../base/variables.scss" as *;
 .footer {
   background-color: $dark;
-  max-height: 560px;
+  min-height: 560px;
   color: $light;
 }
 .footer__wrapper {
@@ -9,7 +9,6 @@
   width: 100%;
   .footer__form {
     h3 {
-      font-family: "Barlow";
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
@@ -18,7 +17,6 @@
       padding-bottom: 40px;
     }
     p {
-      font-family: "Barlow";
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
