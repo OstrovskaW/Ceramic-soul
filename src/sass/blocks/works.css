@@ -1,6 +1,3 @@
-// Works Block Styles
-// This section defines the styles for the works block and its items.
-
 .works {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
