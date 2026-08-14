@@ -3,10 +3,8 @@
 @use "base/variables.scss" as *;
 @use "base/mixins.scss" as *;
 @use "base/basic.scss";
-
 @use "blocks/header.scss";
 @use "blocks/footer.scss";
-
 @use "blocks/promo.scss";
 @use "ui/titles.scss" as *;
 @use "ui/buttons.scss";
