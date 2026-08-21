@@ -1,16 +1,101 @@
-// Works Block Styles
-// This section defines the styles for the works block and its items.
-
+@use "../base/variables.scss" as *;
 .works {
+  padding-top: 60px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
-  padding: 2rem;
+  padding-bottom: 60px;
+  &__slider {
+    margin-top: 40px;
+    padding-bottom: 30px;
+  }
+  .swiper-slide img {
+    width: 100%;
+  }
+  .works__slider-nav {
+    display: none;
+  }
+  .swiper-pagination {
+    bottom: 0px;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: $dark;
+    border-radius: 0;
+    opacity: 1;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $ceramic;
+  }
+  .works__item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+  }
 }
-
-.works__item {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
+@media screen and (min-width: 768px) {
+  .works {
+    .swiper-slide img {
+      width: 400px;
+      margin: 0 auto;
+      display: block;
+    }
+    &__slider {
+      margin-top: 45px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .works {
+    .swiper-slide img {
+      width: 100%;
+      margin: 0;
+    }
+    &__wrapper {
+      position: relative;
+    }
+    &__slider {
+      margin: 80px 40px 0px 40px;
+      padding-bottom: 40px;
+    }
+    .swiper-pagination {
+      bottom: 0px;
+    }
+    .works__slider-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      font-size: 21px;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      &::before {
+        width: auto;
+        margin: 0;
+      }
+    }
+    .icon-left-open {
+      left: 15px;
+    }
+    .icon-right-open {
+      right: 15px;
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .works {
+    &__slider {
+      margin: 80px 85px 0px 85px;
+    }
+    .icon-left-open {
+      left: 40px;
+    }
+    .icon-right-open {
+      right: 40px;
+    }
+  }
 }

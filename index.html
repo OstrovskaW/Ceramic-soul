@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ceramic soul</title>
     <!--<link rel="stylesheet" href="/src/css/style.css" />-->
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -160,16 +160,16 @@
                 placeholder="Question"
                 required
               ></textarea>
-              <label class="touch__label touch__check-block" for="checkbox">
+              <label class="touch__label touch__check-block" for="checkbox-touch">
                 <input
                   required
                   class="touch__check-box"
                   type="checkbox"
-                  id="checkbox"
+                  id="checkbox-touch"
                 />
                 I agree with the <a href="#">terms</a>
               </label>
-              <button class="btn-send touch__btn" type="button">
+              <button class="btn-send touch__btn" type="submit">
                 send request
               </button>
             </form>
@@ -182,8 +182,6 @@
       <div class="container">
         <h2 class="title-h2 title-h2-works">check out our works</h2>
         <div class="works__wrapper">
-          <button class="icon-left-open works__slider-nav"></button>
-          <button class="icon-right-open works__slider-nav"></button>
           <!-- Slider main container -->
           <div class="swiper works__slider">
             <!-- Additional required wrapper -->
@@ -203,8 +201,9 @@
               </div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-scrollbar"></div>
           </div>
+           <button class="icon-left-open works__slider-nav" type="button"></button>
+           <button class="icon-right-open works__slider-nav" type="button"></button>
         </div>
       </div>
     </section>
@@ -223,18 +222,19 @@
               placeholder="Enter your e-mail"
               required
             />
-            <label class="touch__label touch__check-block" for="checkbox">
+            <label class="touch__label touch__check-block" for="checkbox-footer">
                 <input
                   required
                   class="touch__check-box"
                   type="checkbox"
-                  id="checkbox"
+                  id="checkbox-footer"
                 />
                 I agree with the <a href="#">terms</a>
               </label>
-            <button class="btn-send footer__btn" type="button">
-              submite
+            <button class="btn-send footer__btn" type="submit">
+              submit
             </button>
+          </form>
         </div>
         <div class="footer__links">
           <div class="footer__links__block">

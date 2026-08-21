@@ -8,7 +8,6 @@ import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import "../sass/style.scss";
 // init Swiper:
 
@@ -52,11 +51,7 @@ try {
       nextEl: ".icon-right-open",
       prevEl: ".icon-left-open",
     },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-      draggable: true,
-    },
-    modules: [Navigation, Pagination, Scrollbar],
+    modules: [Navigation, Pagination],
   });
 } catch (e) {
   console.error("Swiper error:", e);

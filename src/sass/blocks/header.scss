@@ -8,6 +8,7 @@
   &__logo {
     width: 100px;
     height: 100px;
+    margin: 0 auto;
   }
   &__menu-nav {
     display: flex;
@@ -18,7 +19,6 @@
   &__icons {
     display: flex;
     align-items: flex-start;
-    gap: 15px;
     a {
       display: block;
       color: $dark;
@@ -27,6 +27,7 @@
         width: 20px;
         height: 20px;
         font-size: 18px;
+        margin-right: 13px;
       }
     }
   }
