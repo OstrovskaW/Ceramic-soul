@@ -10,7 +10,7 @@
     height: 100px;
     margin: 0 auto;
   }
-  &__menu-nav {
+  &__menu-logo {
     display: flex;
     align-items: flex-start;
     justify-content: space-between; // разносит логотип и иконки по краям
@@ -100,19 +100,42 @@
 }
 @media screen and (min-width: 768px) {
   .header {
+    &__top {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    &__menu-logo {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+    }
+    &__logo {
+      margin: 0;
+    }
+
     &__icons {
-      margin-left: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
     &__nav {
-      display: block;
+      display: flex;
+      flex-basis: 100%;
+      justify-content: center;
+      width: 100%;
       margin-top: 20px;
+
       ul {
         display: flex;
-        padding-left: 0;
-        justify-content: center;
         gap: 30px;
+        margin: 0;
+        padding: 0;
+
         li {
-          list-style-type: none;
+          list-style: none;
         }
       }
     }
