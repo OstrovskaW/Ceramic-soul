@@ -1,0 +1,124 @@
+@use "../base/variables.scss" as *;
+@use "../base/mixins.scss" as *;
+.blog {
+  padding-top: 50px;
+  &__title {
+    margin-bottom: 60px;
+  }
+  &__title-h3 {
+    text-align: left;
+  }
+  &__wrapper {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  &__card {
+    border: 1px solid $dark;
+    background: $light;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+  &__card__second {
+    margin-bottom: 50px;
+  }
+
+  &__data {
+    &-column {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      padding: 25px 25px 0 25px;
+    }
+  }
+  &__text {
+    margin-top: 25px;
+    padding: 0 25px 25px 25px;
+    color: $dark;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &__img {
+    width: calc(100% + 2px);
+    height: calc(auto + 1px);
+    transform: translatex(-1px) translateY(1px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .blog {
+    &__wrapper {
+      padding: 25px 25px 0 25px;
+      position: relative;
+      @include angle-decoration;
+    }
+    &__text {
+      margin-top: 15px;
+    }
+    &__data {
+      &-column {
+        gap: 0;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .blog {
+    &__wrapper {
+      max-width: 1140px;
+      padding: 25px 25px 0 25px;
+      position: relative;
+    }
+    &__card {
+      max-width: 520px;
+    }
+    &__card__left {
+      margin-bottom: 40px;
+      min-height: 375px;
+    }
+    &__card__ {
+      margin-bottom: 60px;
+      min-height: 394px;
+    }
+    &.blog__img__left {
+      min-height: 260px;
+    }
+    &__text {
+      margin-top: 15px;
+    }
+    &__data {
+      &-column {
+        gap: 0;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1920px) {
+  .blog {
+    &__wrapper {
+      max-width: 1440px;
+      padding: 25px 25px 0 25px;
+      position: relative;
+    }
+    &__card {
+      max-width: 670px;
+      min-height: 335px;
+      margin-bottom: 60px;
+    }
+    &__img {
+      min-height: 240px;
+    }
+    &__text {
+      margin-top: 15px;
+    }
+    &__data {
+      &-column {
+        gap: 0;
+        justify-content: space-between;
+      }
+    }
+  }
+}

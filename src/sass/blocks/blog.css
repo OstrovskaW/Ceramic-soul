@@ -1,0 +1,11 @@
+.blog {
+  padding-top: 50px;
+}
+
+.blog__title {
+  margin-top: 60px;
+}
+
+.blog__title-h3 {
+  text-align: left;
+}
