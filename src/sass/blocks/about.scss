@@ -1,0 +1,55 @@
+@use "../base/variables.scss" as *;
+.title-h2-about {
+  margin: 60px 0 58px 0;
+}
+.img__about__began {
+  margin-bottom: 35px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+.text__about__began p {
+  margin-bottom: 15px;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: $dark;
+}
+@media screen and (min-width: 1200px) {
+  .wrapper__about__began {
+    min-width: 1140px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .img__about__began {
+    width: calc(48% - 10px);
+    min-width: 550px;
+  }
+  .text__about__began {
+    width: calc(50% - 10px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .wrapper__about__began {
+    min-width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .img__about__began {
+    width: calc(48% - 10px);
+    min-width: 700px;
+    img {
+      min-width: 700px;
+    }
+  }
+  .text__about__began {
+    width: calc(50% - 10px);
+  }
+  .text__about__began p {
+    line-height: 24px;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
