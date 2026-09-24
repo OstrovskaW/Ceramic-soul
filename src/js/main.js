@@ -1,5 +1,6 @@
 import "purecss/build/grids-min.css";
 import "purecss/build/grids-responsive-min.css";
+import JustValidate from "just-validate";
 
 // core version + navigation, pagination modules:
 import Swiper from "swiper";
@@ -72,4 +73,59 @@ try {
   });
 
   contents.forEach((c, i) => (c.style.display = i === 0 ? "block" : "none"));
+} catch (e) {}
+
+try {
+  const validator = new JustValidate("form", { submitFormAutomatically: true });
+  validator
+    .addField("#name", [
+      {
+        rule: "required",
+        errorMessage: "Please, fill the name",
+      },
+      {
+        rule: "minLength",
+        value: 2,
+        errorMessage: "Min 2 char",
+      },
+    ])
+    .addField("#email", [
+      {
+        rule: "required",
+      },
+      {
+        rule: "email",
+      },
+    ])
+    .addField(
+      "#question",
+      [
+        {
+          rule: "required",
+        },
+        {
+          rule: "minLength",
+          value: 5,
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#question")
+          .parentElement.querySelector(".error-message"),
+      },
+    )
+
+    .addField(
+      "#checkbox",
+      [
+        {
+          rule: "required",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#checkbox")
+          .parentElement.parentElement.querySelector(".checkbox-error-message"),
+      },
+    );
 } catch (e) {}

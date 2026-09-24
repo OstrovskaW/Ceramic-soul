@@ -1,5 +1,9 @@
 @use "../base/variables.scss" as *;
 .touch {
+  .just-validate-error-field {
+    border: none;
+    outline: 1px solid $ui-error;
+  }
   padding-top: 60px;
   position: relative;
   &__wrapper {
