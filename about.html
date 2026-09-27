@@ -48,6 +48,7 @@
                             <li><a href="#" class="header__link">about</a></li>
                         </ul>
                     </nav>
+                  </div>
                 </header>
             </div>
         </section>
@@ -167,19 +168,21 @@
             <input
               class="footer__input"
               type="email"
-              name="email"
+              id="footer__email"
+              name="footer__email"
               placeholder="Enter your e-mail"
               required
             />
-            <label class="touch__label touch__check-block" for="checkbox-footer">
+            <label class="touch__label touch__check-block" for="footer__checkbox">
                 <input
                   required
                   class="touch__check-box"
                   type="checkbox"
-                  id="checkbox-footer"
+                  id="footer__checkbox"
                 />
                 I agree with the <a href="#">terms</a>
               </label>
+              <div class="checkbox-error-message"></div>
             <button class="btn-send footer__btn" type="submit">
               submit
             </button>
@@ -187,7 +190,7 @@
         </div>
         <div class="footer__links">
           <div class="footer__links__block">
-             <div class="footer__links__block__1">
+             <div class="footer__links__block__1"> 
             <h4>discover</h4>
             <p>About Us</p>
             <p>Blog</p>

@@ -76,7 +76,7 @@ try {
 } catch (e) {}
 
 try {
-  const validator = new JustValidate("form", { submitFormAutomatically: true });
+  const validator = new JustValidate("form");
   validator
     .addField("#name", [
       {
@@ -116,7 +116,7 @@ try {
     )
 
     .addField(
-      "#checkbox",
+      "#checkbox-touch",
       [
         {
           rule: "required",
@@ -124,7 +124,51 @@ try {
       ],
       {
         errorsContainer: document
-          .querySelector("#checkbox")
+          .querySelector("#checkbox-touch")
+          .parentElement.parentElement.querySelector(".checkbox-error-message"),
+      },
+    )
+    .onSuccess((event) => {
+      const form = event.currentTarget;
+      const formData = new FormData(form);
+
+      fetch("https://httpbin.org/post", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log("Success", data);
+          form.reset();
+        });
+    });
+} catch (e) {}
+
+try {
+  const validatorFooter = new JustValidate(".footer__form-block");
+
+  validatorFooter
+    .addField("#footer__email", [
+      {
+        rule: "required",
+        errorMessage: "Fill in the email",
+      },
+      {
+        rule: "email",
+        errorMessage: "Fill in the correct email",
+      },
+    ])
+    .addField(
+      "#footer__checkbox",
+      [
+        {
+          rule: "required",
+          errorMessage: "Fill in the checkbox",
+        },
+      ],
+      {
+        errorsContainer: document
+          .querySelector("#footer__checkbox")
           .parentElement.parentElement.querySelector(".checkbox-error-message"),
       },
     );

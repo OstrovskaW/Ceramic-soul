@@ -156,6 +156,7 @@
                 placeholder="Question"
                 required
               ></textarea>
+                            <div class="error-message"> </div>
               <label class="touch__label touch__check-block" for="checkbox-touch">
                 <input
                   required
@@ -165,6 +166,7 @@
                 />
                 I agree with the <a href="#">terms</a>
               </label>
+              <div class="checkbox-error-message"> </div>
               <button class="btn-send touch__btn" type="submit">
                 send request
               </button>
@@ -215,18 +217,21 @@
               class="footer__input"
               type="email"
               name="email"
+              id="footer__email"
+               name="footer__email"
               placeholder="Enter your e-mail"
               required
             />
-            <label class="touch__label touch__check-block" for="checkbox-footer">
+            <label class="touch__label touch__check-block" for="footer__checkbox">
                 <input
                   required
                   class="touch__check-box"
                   type="checkbox"
-                  id="checkbox-footer"
+                  id="footer__checkbox"
                 />
                 I agree with the <a href="#">terms</a>
               </label>
+              <div class="checkbox-error-message"></div>
             <button class="btn-send footer__btn" type="submit">
               submit
             </button>

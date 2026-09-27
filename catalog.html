@@ -56,6 +56,7 @@
                             <li><a href="#" class="header__link">about</a></li>
                         </ul>
                     </nav>
+                  </div>
                 </header>
             </div>
         </section>
@@ -96,7 +97,7 @@
                     <p class="catalog__price">29.99 €</p>
                   </div>
                   </div>
-<                 </div>
+                 </div>
                <div class="catalog__content__item">
                 <div class="catalog__for__tea">
                   <div class="catalog__tab__element">
@@ -166,17 +167,22 @@
                             <h3>newsletter</h3>
                             <p>Keep up to date with news and promotions</p>
                             <form class="footer__form-block" action="#">
-                                <input class="footer__input" type="email" name="email"
-    placeholder="Enter your e-mail" required/>
-            <label class="touch__label touch__check-block" for="checkbox">
+                                <input class="footer__input" 
+                                type="email" 
+                                name="email"
+                                id="footer__email"
+                                placeholder="Enter your e-mail" 
+                                required/>
+            <label class="touch__label touch__check-block" for="footer__checkbox">
                 <input
                   required
                   class="touch__check-box"
                   type="checkbox"
-                  id="checkbox"
+                  id="footer__checkbox"
                 />
                 I agree with the <a href="#">terms</a>
               </label>
+              <div class="checkbox-error-message"></div>
             <button class="btn-send footer__btn" type="submit">
               submit
             </button>
