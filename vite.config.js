@@ -6,7 +6,9 @@ export default defineConfig({
     rolldownOptions: {
       input: {
         main: resolve(import.meta.dirname, "index.html"),
-        catalog: resolve(__dirname, "catalog.html"),
+        catalog: "catalog.html",
+        blog: "blog.html",
+        about: "about.html",
       },
     },
   },

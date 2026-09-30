@@ -17,6 +17,7 @@
     "vite": "^8.0.14"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "just-validate": "^4.3.0",
     "purecss": "^3.0.0",
     "swiper": "^14.0.0"
