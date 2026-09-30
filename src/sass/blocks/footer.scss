@@ -163,9 +163,25 @@
         width: 428px;
         .footer__links__block__1 {
           width: 15%;
+          p a {
+            color: $light;
+            font-family: "Barlow";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+          }
         }
         .footer__links__block__2 {
           width: 20%;
+          p a {
+            color: $light;
+            font-family: "Barlow";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+          }
         }
         .footer__links__block__3 {
           margin-top: 0px;
